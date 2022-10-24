@@ -1,0 +1,31 @@
+<br>
+<div class="adding-color">
+
+<h2>Thi is my home page</h2>
+<div *ngIf="checkstatus;">
+    FirstName :<input type="text" id="firstname" value="{{name}}">
+    Secondname :<input type="text" id="secondname">
+
+    txtboxNgMod :<input type="text" id="thirdname">
+    Sumbit :<input type="button" value="print" (click)= "print($event)"><br>
+
+</div>
+
+<h3>List of mobiles:</h3>
+<p *ngFor="let mobile of mobiles">{{mobile}}</p>
+<br>
+<h3>List of Laptops Available:</h3><br>
+<select (change)="changeddata($event)">
+    <option *ngFor="let laptopname of laptops">{{laptopname}}</option>
+</select>
+<br><br>
+{{data | uppercase}}<br>
+{{data | lowercase}}<br>
+{{todayDate }}<br><br>
+{{todayDate |date:'d/M/y'}}<br><br>
+{{todayDate |date:"shortTime"}}<br><br>
+
+BankBalance : {{bankBalance | currency :"EUR"}}<br><br>
+BankBalance : {{bankBalance | currency :"INR"}}<br><br>
+Utilization :{{performance | percent }}
+</div>
